@@ -7,6 +7,18 @@ public class Portrait : MonoBehaviour
     {
     }
 
+    void OnHover(bool isOver)
+    {
+        if (isOver)
+        {
+            transform.GetChild(0).GetComponent<UISprite>().depth = 4;
+        }
+        else
+        {
+            transform.GetChild(0).GetComponent<UISprite>().depth = 2;
+        }
+    }
+
     void OnClick()
     {
         transform.parent.BroadcastMessage("DisableThisPortrait");

@@ -54,6 +54,7 @@ public class BallotMenu : MonoBehaviour
                 break;
 
             case MENU_UI.CONFIRM:
+                GameObject.Find("MenuPanel").GetComponents<TweenPosition>()[1].PlayForward();
                 break;
 
             case MENU_UI.CANCEL:
